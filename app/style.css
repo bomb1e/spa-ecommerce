@@ -7,6 +7,10 @@ html {
   background-color: #F4F3EF;
   color: #646361;
   padding: 50px 200px;
+  max-width: 1100px;
+  min-width: 950px;
+  overflow-x: hidden;
+  font-family: "Work Sans", sans-serif;
 }
 
 .clearfix:after {
@@ -23,7 +27,6 @@ html {
   border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
-  margin-right: 10px;
   cursor: pointer;
 }
 
@@ -57,7 +60,7 @@ header nav .menu {
 header nav .menu .item {
   width: 100%;
   height: 120px;
-  padding: 0 10px;
+  padding: 10px 10px;
   cursor: pointer;
 }
 
@@ -219,4 +222,139 @@ main section.helpers .package .cart .right .button {
 
 main section.helpers .package .cart .right .button.checkout {
   background-color: #646361;
+}
+
+main section.products {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+main section.products .product {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  margin: 20px 0;
+}
+
+main section.products .product .image {
+  display: inline-block;
+  position: relative;
+  margin-right: 15px;
+}
+
+main section.products .product .image img {
+  height: 200px;
+  -webkit-filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.5));
+}
+
+main section.products .product .image .bracket {
+  height: 30px;
+  margin-top: 10px;
+  background: url("../assets/bracket.svg") no-repeat center;
+}
+
+main section.products .product .image .badge {
+  position: absolute;
+  top: 5px;
+  color: #C0A868;
+  font-weight: bold;
+  text-align: center;
+}
+
+main section.products .product .image .badge .icon {
+  width: 14px;
+  height: 17px;
+  background: url("../assets/badge.svg") no-repeat top left;
+  fill: #C0A868;
+  background-size: cover;
+}
+
+main section.products .product .details {
+  display: inline-block;
+  color: #A4A3A1;
+}
+
+main section.products .product .details .title {
+  position: absolute;
+  top: 0;
+}
+
+main section.products .product .details .title h1 {
+  font-size: 3em;
+}
+
+main section.products .product .details .selection {
+  position: absolute;
+  bottom: 0;
+}
+
+main section.products .product .details .selection input[type=number]::-webkit-inner-spin-button,
+main section.products .product .details .selection input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+main section.products .product .details .selection .bottle {
+  padding-right: 10px;
+  border-right: 1px dashed #D8D7D3;
+}
+
+main section.products .product .details .selection .case {
+  padding-left: 10px;
+}
+
+main section.products .product .details .selection .bottle, main section.products .product .details .selection .case {
+  display: inline-block;
+}
+
+main section.products .product .details .selection .bottle label, main section.products .product .details .selection .case label {
+  font-size: 1.1em;
+}
+
+main section.products .product .details .selection .bottle .price, main section.products .product .details .selection .case .price {
+  font-size: 1.1em;
+}
+
+main section.products .product .details .selection .bottle input, main section.products .product .details .selection .case input {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+main section.products .product .details .selection .buttons {
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+main section.products .product .details .selection .buttons #add-to-cart {
+  color: white;
+  background-color: #FECD0F !important;
+}
+
+footer table, footer tbody {
+  color: #A4A3A1;
+  text-align: left;
+}
+
+footer table .title, footer tbody .title {
+  border-bottom: 1px dotted #A4A3A1;
+}
+
+footer table .content, footer tbody .content {
+  vertical-align: top;
+  font-size: 0.85em;
+  line-height: 1.3;
+}
+
+footer table .content td, footer tbody .content td {
+  padding-top: 10px;
+  padding-right: 10px;
 }

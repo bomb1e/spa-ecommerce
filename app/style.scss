@@ -2,13 +2,15 @@
 
 $small-font: 0.85em;
 $theme-color: #F4F3EF;
-$light-gray: #E8E9E4;
+$lighter-gray: #E8E9E4;
+$light-gray: #A4A3A1;
 $dark-gray: #646361;
 $border-gray: #B4B4B4;
 $button-gray: #D8D7D3;
 $red: #FE5243;
 $white: white;
 
+$font-family: 'Work Sans', sans-serif;
 
 * {
   margin: 0;
@@ -19,6 +21,10 @@ html {
   background-color: #F4F3EF;
   color: #646361;
   padding: 50px 200px;
+  max-width: 1100px;
+  min-width: 950px;
+  overflow-x: hidden;
+  font-family: $font-family;
 }
 
 // Util
@@ -34,7 +40,6 @@ html {
   border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
-  margin-right: 10px;
   cursor: pointer;
         
 }
@@ -65,7 +70,7 @@ header {
       .item {
         width: 100%;
         height: 120px;
-        padding: 0 10px;
+        padding: 10px 10px;
         cursor: pointer;
         &.active {
           color: #B4B4B4;
@@ -157,7 +162,7 @@ main {
       align-items: center;
       justify-content: space-between;
       border-radius: 5px;
-      background-color: $light-gray;
+      background-color: $lighter-gray;
       padding: 0 15px;
       >div{
         padding: 0 10px;
@@ -213,4 +218,136 @@ main {
       }
     }
   }
+  section.products {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .product {
+      width: 300px;
+      height: 250px;
+      position: relative;
+      
+      margin: 20px 0;
+      .image {
+        display: inline-block;
+        position: relative;
+        margin-right: 15px;
+        img {
+          height: 200px;
+           -webkit-filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.5));
+        }
+        .bracket {
+          height: 30px;
+          margin-top: 10px;
+          background: url('../assets/bracket.svg') no-repeat center;
+        }
+        .badge {
+          position: absolute;
+          top: 5px;
+          color: #C0A868;
+          font-weight: bold;
+          text-align: center;
+          .icon {
+            width: 14px;
+            height: 17px;
+            background: url('../assets/badge.svg') no-repeat top left;
+            fill: #C0A868;
+            background-size: cover;
+          }
+        }
+      }
+      .details {
+        display: inline-block;
+        color: $light-gray;
+        .title {
+          position: absolute;
+          top: 0;
+          h1 {
+            font-size: 3em;
+          }
+        }
+        .selection {
+          position: absolute;
+          bottom: 0;
+          input[type=number]::-webkit-inner-spin-button, 
+          input[type=number]::-webkit-outer-spin-button { 
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              margin: 0;
+          }
+          .bottle {
+            padding-right: 10px;
+            border-right: 1px dashed $button-gray;
+          }
+          .case {
+            padding-left: 10px;
+          }
+          .bottle, .case {
+            display: inline-block;
+            label {
+              font-size: 1.1em;
+            }
+            .price {
+              font-size: 1.1em;
+            }
+            input {
+              width: 20px;
+              height: 20px;
+              text-align: center;
+            }  
+          }
+          .buttons {
+              margin: 15px 0;
+              font-weight: bold;
+              font-size: $small-font;
+              #add-to-cart {
+                color: $white;
+                background-color: #FECD0F!important;
+              }
+            }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  table, tbody {
+    
+    color: $light-gray;
+    text-align: left;
+    .title {
+      border-bottom: 1px dotted $light-gray; 
+    }
+    .content {
+      vertical-align: top;
+      font-size: $small-font;
+      line-height: 1.3;
+      td {
+        padding-top: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  // display: flex;
+  //   flex-direction: row;
+  //   align-content: baseline;
+  // .info {
+  //   width: 25%;
+  //   .title {
+  //     
+  //     h2 {
+  //       display: inline-block;
+  //     }
+  //   }
+  //   p {
+  //     font-size: $small-font;
+  //     line-height: 1.3;
+  //   }
+  // }
 }
