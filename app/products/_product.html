@@ -1,0 +1,31 @@
+<div class="image">
+	<span class="badge" ng-show=" product.rating > 0 ">
+            {{ product.rating }}
+            <div class="icon"></div>
+            </span>
+	</span>
+	<img ng-src="{{ product.imageUrl }}" alt="{{ product.title }}">
+	<div class="bracket"></div>
+</div>
+<div class="details">
+	<div class="title">
+		<h1 class="year"> {{ product.year | year }} </h1>
+		<h2 class="brand">{{ product.title }}</h2>
+	</div>
+	<div class="selection">
+		<div class="bottle">
+			<label>Bottle</label>
+			<p class="price"><strong>{{ product.bottlePrice | currency }}</strong></p>
+			<input type="number" ng-model="bottleQuantity"> <span>QTY</span>
+		</div>
+		<div class="case">
+			<label>Case</label>
+			<p class="price"><strong>{{ product.casePrice | currency }}</strong></p>
+			<input type="number" ng-model="caseQuantity"> <span>QTY</span>
+		</div>
+
+		<div class="buttons">
+			<a id="details" class="button" ng-click="details(product.description)">Details</a>
+			<a id="add-to-cart" class="button" ng-click="addToCart(product, bottleQuantity, caseQuantity)">Add to Cart</a>
+		</div>
+	</div>

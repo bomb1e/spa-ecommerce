@@ -151,45 +151,49 @@ main section.helpers .filter .filters .sort {
   margin-top: 25px;
 }
 
-main section.helpers .package {
+main section.helpers cart {
   width: 70%;
+  border-radius: 5px;
+  background-color: #E8E9E4;
+}
+
+main section.helpers cart .package {
+  padding: 0 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-radius: 5px;
-  background-color: #E8E9E4;
-  padding: 0 15px;
+  height: 100%;
 }
 
-main section.helpers .package > div {
+main section.helpers cart .package > div {
   padding: 0 10px;
   text-align: center;
 }
 
-main section.helpers .package .delivery-info {
+main section.helpers cart .package .delivery-info {
   flex-grow: 1;
   font-size: 0.85em;
 }
 
-main section.helpers .package .quantity {
+main section.helpers cart .package .quantity {
   flex-grow: 1;
   height: 100%;
   border-left: 1px solid white;
   border-right: 1px solid white;
 }
 
-main section.helpers .package .quantity h1 {
+main section.helpers cart .package .quantity h1 {
   font-size: 3em;
   margin-bottom: -10px;
 }
 
-main section.helpers .package .cart {
+main section.helpers cart .package .cart {
   font-size: 0.85em;
   flex-grow: 3;
 }
 
-main section.helpers .package .cart .left {
+main section.helpers cart .package .cart .left {
   display: inline-block;
   margin-right: 10px;
   padding: 5px;
@@ -198,29 +202,29 @@ main section.helpers .package .cart .left {
   width: 60%;
 }
 
-main section.helpers .package .cart .left .total {
+main section.helpers cart .package .cart .left .total {
   margin-top: 10px;
   padding: 5px 0;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
 }
 
-main section.helpers .package .cart .left .total .price {
+main section.helpers cart .package .cart .left .total .price {
   color: #FE5243;
 }
 
-main section.helpers .package .cart .right {
+main section.helpers cart .package .cart .right {
   width: 30%;
   display: inline-block;
 }
 
-main section.helpers .package .cart .right .button {
+main section.helpers cart .package .cart .right .button {
   display: block;
   margin: 5px 0;
   color: white;
 }
 
-main section.helpers .package .cart .right .button.checkout {
+main section.helpers cart .package .cart .right .button.checkout {
   background-color: #646361;
 }
 

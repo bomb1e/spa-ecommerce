@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vessel Wines</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./app/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+</head>
+
+<body ng-app="app" ng-controller="app">
+	<!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+	<header>
+		<nav>
+			<div class="logo">
+
+			</div>
+			<div class="menu">
+				<div class="item">
+					<h2>The People</h2>
+					<p>Quality not quantity, an adage we've lived by for 30 years now.</p>
+				</div>
+
+				<div class="item active">
+					<h2>The Shop</h2>
+					<p>Buy our award-winning wines online, read the tasting and technical notes.</p>
+				</div>
+				<div class="item">
+					<h2>The News</h2>
+					<p>Latest happenings from the winery and our wine club.</p>
+				</div>
+				<div class="item">
+					<h2>Visit Us</h2>
+					<p>Our award winning native garden, artists residence and cellar door.</p>
+				</div>
+			</div>
+		</nav>
+		<section>
+			<div class="shift">
+
+			</div>
+
+			<div class="content">
+				<div class="us-customers">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" viewBox="0 0 7410 3900">
+						<rect width="7410" height="3900" fill="#b22234" />
+						<path d="M0,450H7410m0,600H0m0,600H7410m0,600H0m0,600H7410m0,600H0" stroke="#fff" stroke-width="300" />
+						<rect width="2964" height="2100" fill="#3c3b6e" />
+						<g fill="#fff">
+							<g id="s18">
+								<g id="s9">
+									<g id="s5">
+										<g id="s4">
+											<path id="s" d="M247,90 317.534230,307.082039 132.873218,172.917961H361.126782L176.465770,307.082039z" />
+											<use xlink:href="#s" y="420" />
+											<use xlink:href="#s" y="840" />
+											<use xlink:href="#s" y="1260" />
+										</g>
+										<use xlink:href="#s" y="1680" />
+									</g>
+									<use xlink:href="#s4" x="247" y="210" />
+								</g>
+								<use xlink:href="#s9" x="494" />
+							</g>
+							<use xlink:href="#s18" x="988" />
+							<use xlink:href="#s9" x="1976" />
+							<use xlink:href="#s5" x="2470" />
+						</g>
+					</svg>
+					US Customers please click here to order wine online.
+				</div>
+				<div class="random">
+					<h2>The Club
+						<h2>
+				</div>
+
+			</div>
+		</section>
+	</header>
+
+	<main>
+		<section class="helpers">
+			<div class="filter">
+				<span class="some">Show me</span>
+				<span class="all">Show all</span>
+				<div class="filters">
+					<div class="type">
+						<a class="button">White</a>
+						<a class="button">Red</a>
+						<a class="button">Sparkling</a>
+					</div>
+					<div class="sort">
+						<span>Order by</span>
+						<a class="button">Price</a>
+						<a class="button">Vintage</a>
+					</div>
+				</div>
+			</div>
+			<cart></cart>
+		</section>
+
+		<div ng-view>
+  	</div>
+
+	</main>
+
+  
+
+	<footer>
+
+    <table>
+      <th class="title"><h2>Wine Orders</h2></th>
+      <th class="title"><h2>Delivery</h2></th>
+      <tr class="content">
+        <td width="250px">
+          <p>
+            All prices are in New Zealand Dollars and include GST.
+            <br><br>
+            You must be 18 years or older to order.
+            <br><br>
+            We reserve the right to restrict sales should orders exceed supply.
+            <br><br>
+            We aim to please. If you're not 100% happy, please return your purchase for a complete refund.
+          </p>
+        </td>
+      
+        <td width="250px">
+          <p>
+            Delivery is available within New Zealand only and may take up to two weeks.
+            <br><br>
+            For international inquiries please refer to our local <strong>agents</strong> or search for retailers on <strong>Wine Searcher.</strong>
+          </p>
+        </td>
+      </tr>
+    </table>
+   
+	</footer>
+
+	<script src="./bower_components/angular/angular.js"></script>
+	<script src="./bower_components/angular-route/angular-route.js"></script>
+	<script src="./app/app.js"></script>
+	<script src="./app/products/products.controller.js"></script>
+	<script src="./app/cart/cart.controller.js"></script>
+	<script src="./app/shared/services.js"></script>
+</body>
+
+</html>

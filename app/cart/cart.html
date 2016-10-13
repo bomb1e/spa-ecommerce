@@ -1,0 +1,23 @@
+<div class="package">
+  <div class="delivery-info">
+    <a>Delivery Info</a>
+  </div>
+  <div class="quantity">
+    <h1>{{ totalBottles }}</h1>
+    <h2>Bottles</h2>
+  </div>
+  <div class="cart">
+    <div class="left">
+      <p class="item" ng-repeat="item in cart">
+        <!--{{ cart }}-->
+        {{ item.bottleQuantity }} x {{ item.product.year + " " + item.product.title}}
+        <!--36 x 2013 Breidecker-->
+        </p>
+      <p class="total"> Total <span class="price">$612.18</span></p>
+    </div>
+    <div class="right">
+      <a class="empty button">Empty Cart</a>
+      <a class="checkout button">Checkout</a>
+    </div>
+  </div>
+</div>

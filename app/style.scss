@@ -117,7 +117,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-      margin-top: 50px;
+    margin-top: 50px;
     
     .filter {
       width: 25%;
@@ -155,69 +155,72 @@ main {
       }
 
     }
-
-    .package {
+    cart {
       width: 70%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
       border-radius: 5px;
       background-color: $lighter-gray;
-      padding: 0 15px;
-      >div{
-        padding: 0 10px;
-        text-align: center;
-      }
-      .delivery-info {
-        flex-grow: 1;
-        font-size: $small-font;
-      }
-      .quantity {
-        flex-grow: 1;
+      .package {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         height: 100%;
-        border-left: 1px solid $white;
-        border-right: 1px solid $white;
-        h1 {
-          font-size: 3em;
-          margin-bottom: -10px;
+        >div{
+          padding: 0 10px;
+          text-align: center;
         }
-      }
-      .cart {
-        font-size: $small-font;
-        flex-grow: 3;
-        .left {
-          display: inline-block;
-          margin-right: 10px;
-          padding: 5px;
-          text-align: left;
-          float: left;
-          width: 60%;
-          .total {
-            margin-top: 10px;
-            padding: 5px 0;
-            border-top: 1px solid $white;
-            border-bottom: 1px solid $white;
-            .price {
-              color: $red;
-            }
+        .delivery-info {
+          flex-grow: 1;
+          font-size: $small-font;
+        }
+        .quantity {
+          flex-grow: 1;
+          height: 100%;
+          border-left: 1px solid $white;
+          border-right: 1px solid $white;
+          h1 {
+            font-size: 3em;
+            margin-bottom: -10px;
           }
         }
-        .right {
-          width: 30%;
-          display: inline-block;
-          .button {
-            display: block;
-            margin: 5px 0;
-            color: $white;
-            &.checkout {
-              
-              background-color: $dark-gray;
+        .cart {
+          font-size: $small-font;
+          flex-grow: 3;
+          .left {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px;
+            text-align: left;
+            float: left;
+            width: 60%;
+            .total {
+              margin-top: 10px;
+              padding: 5px 0;
+              border-top: 1px solid $white;
+              border-bottom: 1px solid $white;
+              .price {
+                color: $red;
+              }
+            }
+          }
+          .right {
+            width: 30%;
+            display: inline-block;
+            .button {
+              display: block;
+              margin: 5px 0;
+              color: $white;
+              &.checkout {
+                
+                background-color: $dark-gray;
+              }
             }
           }
         }
       }
     }
+
   }
   section.products {
     margin: 20px 0;
