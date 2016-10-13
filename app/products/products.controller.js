@@ -41,18 +41,21 @@ angular.module('app.products', ['ngRoute'])
     }
 
     $scope.addToCart = function(product, bottleQuantity, caseQuantity) {
-      Cart.add({
-        product: product,
-        bottleQuantity: bottleQuantity,
-        caseQuantity: caseQuantity
-      })
-      emitCartEvent()
-      console.log("Cart item: ", product, "bottleQuantity: " + bottleQuantity)
-    }
-
-    function emitCartEvent() {
-      $rootScope.$emit('cartUpdate')
-    }
+      if(bottleQuantity || caseQuantity) {
+          Cart.add({
+          product: product,
+          bottleQuantity: bottleQuantity,
+          caseQuantity: caseQuantity
+        })
+        Cart.emitCartEvent()
+        this.bottleQuantity = undefined
+        this.caseQuantity = undefined
+      } else {
+          alert('Quantity please :)')
+        }
+        console.log("Cart item: ", product, "bottleQuantity: " + bottleQuantity)
+      }
+    
   })
 
   .directive('product', function() {

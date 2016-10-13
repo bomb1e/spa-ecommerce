@@ -202,6 +202,14 @@ main section.helpers cart .package .cart .left {
   width: 60%;
 }
 
+main section.helpers cart .package .cart .left .button.remove {
+  padding: 1px 4px;
+  color: white;
+  font-size: 0.5em;
+  background-color: #646361;
+  float: right;
+}
+
 main section.helpers cart .package .cart .left .total {
   margin-top: 10px;
   padding: 5px 0;
@@ -210,7 +218,10 @@ main section.helpers cart .package .cart .left .total {
 }
 
 main section.helpers cart .package .cart .left .total .price {
-  color: #FE5243;
+  color: indianred;
+  float: right;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 main section.helpers cart .package .cart .right {
@@ -222,6 +233,12 @@ main section.helpers cart .package .cart .right .button {
   display: block;
   margin: 5px 0;
   color: white;
+}
+
+main section.helpers cart .package .cart .right .button.remove {
+  padding: 2px;
+  font-size: 0.5em;
+  background-color: indianred;
 }
 
 main section.helpers cart .package .cart .right .button.checkout {
