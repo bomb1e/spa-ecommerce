@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/bomb1e/spa-ecommerce#readme",
   "dependencies": {
+    "bower": "^1.7.9",
     "node-sass": "^3.10.1"
   }
 }
