@@ -92,12 +92,12 @@
 		<section class="helpers">
 			<div class="filter">
 				<span class="some">Show me</span>
-				<span class="all">Show all</span>
+				<span class="all" ng-click="filterBy('')">Show all</span>
 				<div class="filters">
 					<div class="type">
-						<a class="button">White</a>
-						<a class="button">Red</a>
-						<a class="button">Sparkling</a>
+						<a class="button" ng-click="filterBy('white')">White</a>
+						<a class="button" ng-click="filterBy('red')">Red</a>
+						<a class="button" ng-click="filterBy('sparkling')">Sparkling</a>
 					</div>
 					<div class="sort">
 						<span>Order by</span>

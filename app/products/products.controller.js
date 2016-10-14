@@ -13,14 +13,19 @@ angular.module('app.products', ['ngRoute'])
     function resolveProducts(firebaseData) {
       return firebaseData.products
     }
-    
+
   }])
 
   .controller('products', function ($scope, $rootScope, Cart, $filter, firebaseData) {
     $scope.order = ""
+    $scope.filter = ""
 
     $rootScope.$on('order', function(event, order) {
       $scope.order = order
+    })
+
+    $rootScope.$on('filter', function(event, filter) {
+      $scope.filter = filter
     })
 
     var products = firebaseData.products
