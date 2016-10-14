@@ -13,8 +13,9 @@ var app = angular.module('app', [
     $routeProvider.otherwise({redirectTo: '/'});
   }])
 
-  .controller('app', function ($scope, LocalStorage, $rootScope) {
-    // LocalStorage.set('cart', [])
+  .controller('app', function ($scope, LocalStorage, $rootScope, $location) {
+    // Initialize cart
+    LocalStorage.set('cart', [])
 
     $scope.orderBy = function(order) {
       $rootScope.$emit('order', order)
@@ -22,6 +23,10 @@ var app = angular.module('app', [
 
     $scope.filterBy = function(filter) {
       $rootScope.$emit('filter', filter)
+    }
+
+    $scope.home = function() {
+      $location.url('/')
     }
   })
 

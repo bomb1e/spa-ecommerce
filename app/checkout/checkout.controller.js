@@ -29,8 +29,16 @@ angular.module('app.checkout', ['ngRoute'])
       
       // Build order object
       var order = {
-        cart: $scope.cart,
+        cart: sanitize($scope.cart),
         totalPrice: $scope.totalPrice
+      }
+
+      function sanitize(cart) {
+        
+        return cart.map(function(item) {
+          return delete item.product['$id']
+        })
+
       }
 
       swal({
@@ -57,11 +65,11 @@ angular.module('app.checkout', ['ngRoute'])
           firebaseData.orders.push(order)
 
           // Give the user some feedback and redirect to the store page
-          swal("Order worth $" + order.totalPrice + " made for " + inputValue + "!");
-          setTimeout(function() {
-            $location.url('/')
-          }, 2000);
+          swal("Order worth $" + order.totalPrice + " made for phone number" + inputValue + "!");
         }, 2000);
+        Cart.empty()
+        Cart.emitCartEvent()
+        $location.url('/')
       });
     }
 
