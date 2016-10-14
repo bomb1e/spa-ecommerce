@@ -1,4 +1,4 @@
 <section class="products">
-	<product class="product" product=product ng-repeat="product in products">
+	<product class="product" product=product ng-repeat="product in products | orderBy:order:reverse">
 	</product>
 </section>

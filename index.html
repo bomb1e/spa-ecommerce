@@ -101,8 +101,8 @@
 					</div>
 					<div class="sort">
 						<span>Order by</span>
-						<a class="button">Price</a>
-						<a class="button">Vintage</a>
+						<a class="button" ng-click="orderBy('bottlePrice')">Price</a>
+						<a class="button" ng-click="orderBy('year')">Vintage</a>
 					</div>
 				</div>
 			</div>
@@ -148,6 +148,20 @@
 
 	<script src="./bower_components/angular/angular.js"></script>
 	<script src="./bower_components/angular-route/angular-route.js"></script>
+	<script src="./bower_components/firebase/firebase.js"></script>
+	<script src="./bower_components/angularfire/dist/angularfire.min.js"></script>
+	<script>
+		// Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyCOh6EhGAJ_a5bV1oeqi1qQOl3lTph2p1Q",
+      authDomain: "spa-ecommerce.firebaseapp.com",
+      databaseURL: "https://spa-ecommerce.firebaseio.com",
+      storageBucket: "spa-ecommerce.appspot.com",
+      messagingSenderId: "924190004662"
+    };
+    
+    firebase.initializeApp(firebaseConfig);
+	</script>
 	<script src="./app/app.js"></script>
 	<script src="./app/products/products.controller.js"></script>
 	<script src="./app/cart/cart.controller.js"></script>

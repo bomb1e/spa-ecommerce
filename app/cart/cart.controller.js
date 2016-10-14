@@ -16,7 +16,6 @@ angular.module('app.cart', [])
         })
 
         $scope.totalPrice = $scope.cart.map(function(item) {
-          console.log('item', item)
           return itemTotal(item)
         }).reduce(function(a,b) {
           return a + b
@@ -28,17 +27,14 @@ angular.module('app.cart', [])
     })
     $scope.emptyCart = function() {
       Cart.empty()
-      console.log("empty cart!")
       Cart.emitCartEvent()
     }
     $scope.remove = function(index) {
-      console.log(index)
       Cart.remove(index)
       Cart.emitCartEvent()
     }
 
     function itemTotal(item) {
-      console.log('item', item)
       return ((item.bottleQuantity * item.product.bottlePrice) || 0) + ((item.caseQuantity * item.product.casePrice) || 0)    
     }
     
@@ -65,13 +61,11 @@ angular.module('app.cart', [])
       },
 
       remove: function(index) {
-        console.log(index)
         index !== 0 ? cart.splice(index, 1) : cart.pop()
         LocalStorage.set('cart', cart)
       },
 
       empty: function() {
-        console.log(cart, LocalStorage.get('cart'))
         LocalStorage.set('cart', [])
         cart = []
       },
