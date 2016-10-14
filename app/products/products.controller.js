@@ -33,7 +33,7 @@ angular.module('app.products', ['ngRoute'])
     $scope.products = products
 
     $scope.details = function(description) {
-      console.log("Product desc: " + description);
+      swal("Product description", description);
     }
 
     $scope.addToCart = function(product, bottleQuantity, caseQuantity) {
@@ -47,7 +47,7 @@ angular.module('app.products', ['ngRoute'])
         this.bottleQuantity = undefined
         this.caseQuantity = undefined
       } else {
-          alert('Quantity please :)')
+          swal('Quantity please :)')
         }
       }
     
