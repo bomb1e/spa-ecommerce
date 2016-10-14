@@ -17,8 +17,6 @@ angular.module('app.products', ['ngRoute'])
   }])
 
   .controller('products', function ($scope, $rootScope, Cart, $filter, firebaseData) {
-    
-    // Product filters and sort
     $scope.order = ""
     $scope.filter = ""
 
@@ -54,7 +52,7 @@ angular.module('app.products', ['ngRoute'])
       }
     
   })
-  // <product></product>
+
   .directive('product', function() {
     return {
       restrict: "E",

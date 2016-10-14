@@ -1,0 +1,22 @@
+<table class="checkout">
+  <th></th>
+  <th>Item</th>
+  <th>Quantity</th>
+  <th>Price</th>
+  <tr ng-repeat="item in cart">
+    <td>
+      <img ng-src="{{ item.product.imageUrl }}" height="50px">
+    </td>
+    <td>{{ item.product.title }}</td>
+    <td> {{ item.caseQuantity || item.bottleQuantity }} </td>
+    <td>{{ itemTotal(item) | number:2 }}</td>
+  </tr>
+  <tr>
+    <td colspan="3"></td>
+    <td style="font-size: 1.2em">
+      <h3>Total: <strong> {{ totalPrice | currency}} </strong></h3>
+      <a class="order button" ng-click="order()">Order Now</a>
+    </td>
+  </tr>
+</table>
+</div>

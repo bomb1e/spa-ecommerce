@@ -9,14 +9,17 @@
   <div class="cart">
     <div class="left">
       <p class="item" ng-repeat="item in cart">
+        <!--{{ cart }}-->
         {{ (item.bottleQuantity || 0) + (item.caseQuantity || 0) }} x {{ item.product.year + " " + item.product.title}} 
+        
         <a class="remove button" ng-click="remove($index)"> X </a>
+        <!--36 x 2013 Breidecker-->
       </p>
       <p class="total"> Total <span class="price">{{ totalPrice | currency }}</span></p>
     </div>
     <div class="right">
       <a class="empty button" ng-click="emptyCart()">Empty Cart</a>
-      <a class="checkout button" ng-click="checkout()">Checkout</a>
+      <a class="checkout button">Checkout</a>
     </div>
   </div>
 </div>

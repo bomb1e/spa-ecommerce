@@ -1,0 +1,29 @@
+{
+  "name": "spa-ecommerce",
+  "version": "1.0.0",
+  "description": "An ecommerce website built in angular and firebase",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bomb1e/spa-ecommerce.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "spa",
+    "angular",
+    "firebase"
+  ],
+  "author": "Eric Githinji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bomb1e/spa-ecommerce/issues"
+  },
+  "homepage": "https://github.com/bomb1e/spa-ecommerce#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "node-sass": "^3.10.1"
+  }
+}

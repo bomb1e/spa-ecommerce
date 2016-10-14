@@ -1,0 +1,61 @@
+{
+  "products" : [
+    {
+      "year": "2013",
+      "title": "Breidecker",
+      "rating": 2,
+      "bottlePrice": 17.90,
+      "casePrice": 204.06,
+      "description": "",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/spa-ecommerce.appspot.com/o/wine-bottles%2FBreidecker_small.jpg?alt=media&token=a9a3a38f-b189-4b6c-a609-6b05c03d3398",
+      "tags": ["white"]
+    },
+    {
+      "year": "2015",
+      "title": "Chardonnay",
+      "rating": 12,
+      "bottlePrice": 18.90,
+      "casePrice": 215.46,
+      "description": "",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/spa-ecommerce.appspot.com/o/wine-bottles%2Fchardonnay_v_1.png?alt=media&token=b0341993-4e23-4526-967f-5fb604fef535",
+      "tags": ["white"]
+    },{
+      "year": "2015",
+      "title": "Gewurztraminer",
+      "rating": 0,
+      "bottlePrice": 22.90,
+      "casePrice": 261.06,
+      "description": "",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/spa-ecommerce.appspot.com/o/wine-bottles%2FHunters_Gewurztraminer_NV_-_webv.png?alt=media&token=17e1abea-f1cc-47e2-85e1-8eddd6beee32",
+      "tags": ["white"]
+    },{
+      "year": "2014",
+      "title": "Hukapapa Dessert Riesling (375ml)",
+      "rating": 8,
+      "bottlePrice": 21.90,
+      "casePrice": 262.80,
+      "description": "",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/spa-ecommerce.appspot.com/o/wine-bottles%2FHukapapa_v.png?alt=media&token=c1ee937a-e152-4896-b848-498a26b1d9f0",
+      "tags": ["white"]
+    }, {
+      "year": "2013",
+      "title": "Late Harvest Sauvingon Blanc(375ml)",
+      "rating": 0,
+      "bottlePrice": 21.90,
+      "casePrice": 262.80,
+      "description": "",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/spa-ecommerce.appspot.com/o/wine-bottles%2FHunters_Late_Harvest_Sauvignon-Blanc_NV_-_webv.png?alt=media&token=d7c97ae0-7f0b-400d-afff-ac6809aeb359",
+      "tags": ["white"]
+    },{
+      "year": " ",
+      "title": "MiruMiru(TM) Non-Vintage",
+      "rating": 22,
+      "bottlePrice": 28.90,
+      "casePrice": 149.40,
+      "description": "",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/spa-ecommerce.appspot.com/o/wine-bottles%2Fhunters_mirumiru_non_vintage_PNG_v3.png?alt=media&token=346e9f6b-e1e1-4827-b408-b838d46b6421",
+      "tags": ["red"]
+    }
+  ],
+  "orders" : []
+ }

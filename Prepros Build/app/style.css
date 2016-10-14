@@ -366,16 +366,6 @@ main section.products .product .details .selection .buttons #add-to-cart {
   background-color: #FECD0F !important;
 }
 
-main .checkout {
-  width: 100%;
-  text-align: center;
-  margin: 50px 0;
-}
-
-main .checkout h3 {
-  margin: 20px 0;
-}
-
 footer table, footer tbody {
   color: #A4A3A1;
   text-align: left;

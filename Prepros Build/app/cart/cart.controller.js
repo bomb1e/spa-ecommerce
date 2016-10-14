@@ -1,12 +1,10 @@
 'use strict';
 
 angular.module('app.cart', [])
-  .controller('cart', function($scope, $rootScope, Cart, $location){
+  .controller('cart', function($scope, $rootScope, Cart){
     $scope.totalBottles = 0
     $scope.cart = Cart.get()
-    $scope.totalPrice = Cart.totalPrice
-
-    // Listen for updates to the cart and compute totals
+    $scope.totalPrice = 0
     $rootScope.$on('cartUpdate', function(){
       $scope.cart = Cart.get()
       
@@ -26,21 +24,14 @@ angular.module('app.cart', [])
         $scope.totalPrice = 0
         $scope.totalBottles = 0
       }
-      Cart.totalPrice = $scope.totalPrice
     })
-
     $scope.emptyCart = function() {
       Cart.empty()
       Cart.emitCartEvent()
     }
-
     $scope.remove = function(index) {
       Cart.remove(index)
       Cart.emitCartEvent()
-    }
-
-    $scope.checkout = function() {
-      $scope.cart.length > 0 ? $location.url('/checkout') : swal('Add a bottle or case to the cart')
     }
 
     function itemTotal(item) {
@@ -49,8 +40,6 @@ angular.module('app.cart', [])
     
 
   })
-
-  // <cart></cart>
   .directive('cart', function(){
     return {
       restrict: "E",
@@ -58,13 +47,10 @@ angular.module('app.cart', [])
       controller: 'cart'
     }
   })
-
-  // Service to deal with Cart logic
   .factory('Cart', function(LocalStorage, $rootScope) {
     var cart = LocalStorage.get('cart')
-    var totalPrice = 0
+
     return {
-      
       get: function() {
         return LocalStorage.get('cart')
       },

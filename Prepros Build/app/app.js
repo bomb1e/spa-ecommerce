@@ -5,23 +5,27 @@ var app = angular.module('app', [
   'services',
   'app.products',
   'app.cart',
-  'app.checkout',
   'firebase'
   ])
 
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/'});
+    
+    
+
   }])
 
   .controller('app', function ($scope, LocalStorage, $rootScope) {
-    // LocalStorage.set('cart', [])
+    LocalStorage.set('cart', [])
 
     $scope.orderBy = function(order) {
       $rootScope.$emit('order', order)
+      console.log(order)
     }
 
     $scope.filterBy = function(filter) {
       $rootScope.$emit('filter', filter)
+      console.log(filter)
     }
   })
 
